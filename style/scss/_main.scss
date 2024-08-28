@@ -1,0 +1,14 @@
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  width: 920px;
+  max-width: 100%;
+  margin: 64px auto;
+
+  article {
+    border: 1px solid #000;
+    border-radius: 36px;
+    padding: 20px;
+  }
+}
