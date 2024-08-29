@@ -35,7 +35,7 @@
     //background: $white; // Фон перемикача
     border-radius: 10px; // Закруглення кута для перемикача
     overflow: hidden; // Сховати частини, що виходять за межі закругленого блока
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Легкий тіньовий ефект
+    box-shadow: $shadow-style;
 
     .language-button {
       display: flex;

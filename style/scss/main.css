@@ -40,7 +40,7 @@ body {
   align-items: center;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 16px 0px rgba(29, 29, 29, 0.23);
 }
 .header .language-switcher .language-button {
   display: flex;
@@ -79,14 +79,29 @@ main {
   display: flex;
   flex-direction: column;
   gap: 64px;
-  width: 920px;
+  width: 800px;
   max-width: 100%;
   margin: 64px auto;
 }
-main article {
-  border: 1px solid #000;
+main .block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0px 0px 16px 0px rgba(29, 29, 29, 0.23);
   border-radius: 36px;
   padding: 20px;
+}
+main .block .block__text li {
+  position: relative;
+  left: 48px;
+  font-size: 32px;
+}
+main .block .block__text p {
+  position: relative;
+  left: 48px;
+  width: calc(100% - 48px);
 }
 
 .carousel-container {
@@ -101,22 +116,27 @@ main article {
   overflow-x: scroll;
   scroll-behavior: smooth;
   width: 100%;
-  padding: 10px;
+  height: 428px;
   scroll-snap-type: x mandatory;
+  justify-content: start;
 }
 .carousel-container .carousel .carousel-item {
   flex: 0 0 auto;
-  width: 200px;
+  height: 428px;
   margin-right: 10px;
   scroll-snap-align: start;
 }
 .carousel-container .carousel .carousel-item img, .carousel-container .carousel .carousel-item video {
+  height: calc(100% - 10px);
   max-width: 100%;
   border-radius: 5px;
 }
 .carousel-container .carousel-button {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 16px 0px rgba(29, 29, 29, 0.23);
   border: none;
   padding: 10px;
   cursor: pointer;

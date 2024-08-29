@@ -2,13 +2,34 @@ main {
   display: flex;
   flex-direction: column;
   gap: 64px;
-  width: 920px;
+  width: 800px;
   max-width: 100%;
   margin: 64px auto;
 
-  article {
-    border: 1px solid #000;
+  .block {
+    //border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    box-shadow: $shadow-style;
     border-radius: 36px;
     padding: 20px;
+
+    .block__text {
+      li {
+        position: relative;
+        left: 48px;
+        font-size: 32px;
+      }
+
+      p {
+        position: relative;
+        left: 48px;
+        width: calc(100% - 48px);
+      }
+    }
   }
 }
