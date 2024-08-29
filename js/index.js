@@ -17,7 +17,7 @@ async function loadTranslations(lang) {
     try {
         const response = await fetch(`/js/translations/${lang}.json`); // Вкажи правильний шлях до файлів
         if (!response.ok) {
-            throw new Error(`Could not load translations for ${lang}`);
+            Error(`Could not load translations for ${lang}`);
         }
         return await response.json();
     } catch (error) {

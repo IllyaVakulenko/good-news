@@ -98,15 +98,23 @@ main .block {
   border-radius: 36px;
   padding: 20px;
 }
-main .block .block__text li {
+main .block .block__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+main .block .block__text .header {
   position: relative;
+  width: calc(100% - 48px);
   left: 48px;
   font-size: 32px;
+  line-height: 40px;
 }
-main .block .block__text p {
+main .block .block__text .description {
   position: relative;
   left: 48px;
   width: calc(100% - 48px);
+  font-size: 16px;
 }
 
 .carousel-container {
