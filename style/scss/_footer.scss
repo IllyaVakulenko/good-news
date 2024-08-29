@@ -1,0 +1,39 @@
+.footer {
+  //height: 200px;
+  width: 100%;
+  box-shadow: $shadow-style;
+  color: $black;
+
+  .content {
+    padding: 20px 0;
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  .created-by {
+    //position: absolute;
+    height: 64px;
+    border-top: rgba(119, 119, 119, 0.8) solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .credits {
+      p {
+        margin: 0;
+        font-size: 14px;
+        color: #333;
+
+        a {
+          color: #708556;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

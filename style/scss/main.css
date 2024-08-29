@@ -168,4 +168,35 @@ main .block .block__text .description {
   right: 10px;
 }
 
+.footer {
+  width: 100%;
+  box-shadow: 0px 0px 16px 0px rgba(29, 29, 29, 0.23);
+  color: #1D1D1D;
+}
+.footer .content {
+  padding: 20px 0;
+  width: 800px;
+  margin: 0 auto;
+}
+.footer .created-by {
+  height: 64px;
+  border-top: rgba(119, 119, 119, 0.8) solid 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer .created-by .credits p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+.footer .created-by .credits p a {
+  color: #708556;
+  text-decoration: none;
+}
+.footer .created-by .credits p a:hover {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=main.css.map */
