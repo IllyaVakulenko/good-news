@@ -1,16 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const carousel = document.querySelector('.carousel');
-    const prevButton = document.querySelector('.prev-button');
-    const nextButton = document.querySelector('.next-button');
+    // Знаходимо всі каруселі разом з їх кнопками
+    const carousels = document.querySelectorAll('.carousel-container');
 
-    nextButton.addEventListener('click', () => {
-        carousel.scrollBy({left: 200, behavior: 'smooth'}); // Scroll left by 200px
-    });
+    carousels.forEach(carouselContainer => {
+        const carousel = carouselContainer.querySelector('.carousel');
+        const prevButton = carouselContainer.querySelector('.prev-button');
+        const nextButton = carouselContainer.querySelector('.next-button');
 
-    prevButton.addEventListener('click', () => {
-        carousel.scrollBy({left: -200, behavior: 'smooth'}); // Scroll left by 200px
+        nextButton.addEventListener('click', () => {
+            carousel.scrollBy({left: 200, behavior: 'smooth'}); // Прокрутка праворуч на 200px
+        });
+
+        prevButton.addEventListener('click', () => {
+            carousel.scrollBy({left: -200, behavior: 'smooth'}); // Прокрутка ліворуч на 200px
+        });
     });
 });
+
 
 // Функція для завантаження JSON файлу з перекладами
 async function loadTranslations(lang) {
