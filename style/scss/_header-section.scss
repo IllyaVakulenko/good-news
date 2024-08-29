@@ -1,6 +1,6 @@
 @import "variables";
 
-.header {
+.header-section {
   position: fixed;
   width: 100%;
   height: 100px;
@@ -36,6 +36,7 @@
     border-radius: 10px; // Закруглення кута для перемикача
     overflow: hidden; // Сховати частини, що виходять за межі закругленого блока
     box-shadow: $shadow-style;
+    cursor: pointer;
 
     .language-button {
       display: flex;

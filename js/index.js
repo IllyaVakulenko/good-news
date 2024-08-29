@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Функція для завантаження JSON файлу з перекладами
 async function loadTranslations(lang) {
     try {
-        const response = await fetch(`./translations/${lang}.json`); // Вкажи правильний шлях до файлів
+        const response = await fetch(`/js/translations/${lang}.json`); // Вкажи правильний шлях до файлів
         if (!response.ok) {
             throw new Error(`Could not load translations for ${lang}`);
         }
