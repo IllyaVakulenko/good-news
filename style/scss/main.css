@@ -49,10 +49,15 @@ body {
   justify-content: center;
   width: 35px;
   height: 35px;
+  transition-duration: 0.2s;
 }
 .header-section .language-switcher .language-button:hover {
-  background-color: #1D1D1D;
+  background-color: #373737;
   color: #D9D9D9;
+}
+.header-section .language-switcher .language-button.active {
+  background-color: #1D1D1D;
+  color: white;
 }
 
 .hero {
@@ -110,6 +115,7 @@ main .block .block__text p {
   position: relative;
   width: 100%;
   overflow: hidden;
+  border-radius: 10px;
 }
 .carousel-container .carousel {
   display: flex;
@@ -127,7 +133,7 @@ main .block .block__text p {
   scroll-snap-align: start;
 }
 .carousel-container .carousel .carousel-item img, .carousel-container .carousel .carousel-item video {
-  height: calc(100% - 10px);
+  height: calc(100% - 6px);
   max-width: 100%;
   border-radius: 5px;
 }

@@ -46,6 +46,23 @@ async function setLanguage(lang) {
 
     // Зберігаємо обрану мову в localStorage
     localStorage.setItem('language', lang);
+
+    // Оновлюємо стилі для активної мови
+    updateLanguageSwitcher(lang);
+}
+
+// Функція для оновлення стилів перемикача мов
+function updateLanguageSwitcher(selectedLang) {
+    const buttons = document.querySelectorAll('.language-switcher .language-button');
+
+    buttons.forEach(button => {
+        button.classList.remove('active'); // Видаляємо активний клас з усіх кнопок
+    });
+
+    const activeButton = document.getElementById(`btn-${selectedLang}`);
+    if (activeButton) {
+        activeButton.classList.add('active'); // Додаємо активний клас для вибраної кнопки
+    }
 }
 
 // Завантаження мови з localStorage при завантаженні сторінки

@@ -44,10 +44,16 @@
       justify-content: center;
       width: 35px;
       height: 35px;
+      transition-duration: .2s;
 
       &:hover {
-        background-color: $black;
+        background-color: #373737;
         color: $white;
+      }
+
+      &.active {
+        background-color: $active-color; // Використовуємо змінну для активного кольору
+        color: white; // Змінюємо колір тексту для активної кнопки
       }
     }
 
