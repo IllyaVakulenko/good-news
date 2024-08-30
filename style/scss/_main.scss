@@ -23,12 +23,15 @@ main {
       flex-direction: column;
       gap: 8px;
 
-      .header {
-        position: relative;
+      ol {
         width: calc(100% - 48px);
+        position: relative;
         left: 48px;
-        font-size: 32px;
-        line-height: 40px;
+
+        .header {
+          font-size: 32px;
+          line-height: 40px;
+        }
       }
 
       .description {
