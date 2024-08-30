@@ -2,30 +2,43 @@
   display: flex;
   align-items: center;
   position: relative;
+  height: $carousel-height;
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
 
   .carousel {
+    background: #cacaca;
     display: flex;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
     width: 100%;
     height: $carousel-height;
-    //padding: 10px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    justify-content: start;
+    position: relative; // Важливо для псевдоелементів
+
+    .carousel-inner {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      //padding: 0 40px; // Доданий паддінг до внутрішнього контейнера
+      align-items: center;
+      justify-content: start;
+
+    }
 
     .carousel-item {
       flex: 0 0 auto;
-      //width: 200px; // Item width
-      max-width: 100%;
-      height: $carousel-height;
-      margin-right: 10px;
-      scroll-snap-align: start;
+      width: 100%;
+      height: calc($carousel-height - 20px);
+      scroll-snap-align: center; // Центрування елементу по центру
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-      img, video {
-        height: calc(100% - 6px); // 6px its magick number idk
+      img,
+      video {
+        height: calc(100% - 6px); // Чарівне число :)
         max-width: 100%;
         border-radius: 5px;
       }
@@ -34,7 +47,6 @@
 
   .carousel-button {
     background-color: #fff;
-    //color: #fff;
     width: 40px;
     height: 40px;
     border-radius: 50%;
