@@ -19,6 +19,7 @@
     .carousel-item {
       flex: 0 0 auto;
       //width: 200px; // Item width
+      max-width: 100%;
       height: $carousel-height;
       margin-right: 10px;
       scroll-snap-align: start;
